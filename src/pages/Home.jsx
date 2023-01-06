@@ -1,12 +1,15 @@
 import "../styles/pages/Home.scss";
+import Header from "../components/Header";
 
 function Home() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <Header />
+      <div className="imageDeco">
+        
+      </div>
+      <div className="App-header">
+        <p>La page Home de Kasa</p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -15,7 +18,7 @@ function Home() {
         >
           Learn React
         </a>
-      </header>
+      </div>
     </div>
   );
 }

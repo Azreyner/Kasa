@@ -1,0 +1,42 @@
+@import "../index.scss";
+
+.headerKasa {
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        width: 200px;
+        min-width: 100px;
+        margin-left: 10px;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    li a{
+        color: $rose;
+    }
+    }
+}
+
+@media (max-width: 500px) { 
+    .headerKasa header img{
+        width: 145px;
+    }
+
+    .headerKasa nav{
+        width: 120px;
+    }
+
+    .headerKasa li a{
+        font-size: 12px;
+    }
+ }
