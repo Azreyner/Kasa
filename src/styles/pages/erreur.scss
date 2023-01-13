@@ -1,0 +1,28 @@
+@import "../index.scss";
+
+.erreurContent{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: $rose;
+
+    &__erreurTitre{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 140px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    &__erreurPhrase, &__lien{
+        text-align: center;
+    }
+
+    &__lien{
+        margin-top: 100px;
+        color: $rose;
+    }
+}

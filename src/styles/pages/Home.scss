@@ -40,9 +40,11 @@
 .blocList {
   background-color: #F7F7F7;
   border-radius: 25px;
-  width: 1240px;
+  max-width: 1240px;
+  min-width: 320px;
   padding: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin: 50px 0;
 }

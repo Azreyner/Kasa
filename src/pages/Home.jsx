@@ -2,6 +2,7 @@ import "../styles/pages/Home.scss";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Card from "../components/Card";
 
 function Home() {
@@ -32,6 +33,7 @@ function Home() {
           />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
