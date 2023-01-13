@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "./styles/variable.scss"
+import "./styles/variable.scss";
 import "./styles/index.scss";
 import Home from "./pages/Home";
 import Erreur from "./pages/Erreur";
-import Apropos from "./pages/Apropos"
-import FicheLogement from "./pages/FicheLogement"
+import Apropos from "./pages/Apropos";
+import FicheLogement from "./pages/FicheLogement";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <Apropos />,
   },
   {
-    path: "/ficheLogement",
+    path: "/ficheLogement/:idPropriete",
     element: <FicheLogement />,
   },
 ]);
