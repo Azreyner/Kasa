@@ -1,5 +1,37 @@
-.Apropos .lesDropDown{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+.Apropos .lesDropDown {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 0 70px;
+  max-width: 900px;
+}
+
+.decoration {
+  position: relative;
+  height: 223px;
+  padding: 0 10px;
+  border-radius: 15px;
+  background-image: url("../../assets/img/IMGAPROPOS.png");
+  margin-bottom: 20px;
+}
+
+.decoration:after {
+  content: ""; // :before and :after both require content
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: .3;
+  border-radius: 15px;
+  // mix-blend-mode: color;
+  // mix-blend-mode: hard-light;
+  // mix-blend-mode: hue;
+}
+
+@media screen and (max-width: 890px) {
+  .Apropos .lesDropDown {
+    padding: 0 20px;
   }
+}

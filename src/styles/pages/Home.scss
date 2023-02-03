@@ -39,6 +39,10 @@
 
 @import "../index.scss";
 
+.App {
+  max-width: 1240px;
+}
+
 .blocList {
   background-color: #F7F7F7;
   border-radius: 25px;
@@ -49,4 +53,59 @@
   flex-flow: row wrap;
   justify-content: space-around;
   margin: 50px 0;
+}
+
+.decorationHome {
+  position: relative;
+  height: 223px;
+  padding: 0 10px;
+  border-radius: 15px;
+  background-image: url("../../assets/img/IMGHOME.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    color: $blanc;
+  }
+}
+
+.decorationHome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: .3;
+  border-radius: 15px;
+}
+
+.decorationHome::after {
+  content: "Chez vous, partout et ailleurs";
+  position: absolute;
+  font-size: 32px;
+  top: 42%;
+  left: 34%;
+  color: #fff;
+}
+
+@media screen and (max-width: 890px) {
+  .App {
+    padding: 0 10px;
+  }
+
+  .decorationHome::after {
+    left: 24%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .decorationHome::after {
+    left: 18%;
+  }
 }

@@ -1,0 +1,12 @@
+.Note{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@media screen and (max-width: 890px) {
+    .Note{
+        img{
+            width: 20px;
+        }
+    }
+}

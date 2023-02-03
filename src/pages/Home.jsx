@@ -20,18 +20,20 @@ function Home() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <div className="imageDeco"></div>
-      <div className="blocList">
-        {logements.map((logement) => (
-          <Card
-            key={logement.id}
-            imageUrl={logement.cover}
-            titrePropriete={logement.title}
-            idPropriete={logement.id}
-          />
-        ))}
+    <div className="containerPage">
+      <div className="App">
+        <Header />
+        <div className="decorationHome"></div>
+        <div className="blocList">
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              imageUrl={logement.cover}
+              titrePropriete={logement.title}
+              idPropriete={logement.id}
+            />
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

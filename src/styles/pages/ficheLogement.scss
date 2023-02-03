@@ -1,5 +1,9 @@
 @import "../index.scss";
 
+.ficheLogement{
+  max-width: 1240px;
+}
+
 .infoGenerale{
     display: flex;
     flex-flow: row wrap;
@@ -64,6 +68,7 @@
 }
 
 .infoDropdown{
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -74,6 +79,11 @@
 }
 
 @media screen and (max-width: 890px) {
+
+    .ficheLogement{
+        padding: 0 15px;
+      }
+    
     .infoGenerale{
         flex-flow: column nowrap;
 
@@ -99,6 +109,7 @@
         &__infos2{
             flex-flow: row-reverse wrap;
             justify-content: space-between;
+            align-items: center;
     
             &__proprio{
                 display: flex;
@@ -118,7 +129,7 @@
 
     .infoDropdown{
         flex-flow: column nowrap;
-    
+        width: 200%;
         .Dropdown:first-child{
             margin-right: 0;
         }

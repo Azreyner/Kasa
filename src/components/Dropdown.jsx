@@ -8,7 +8,7 @@ const Dropdown = (props) => {
   return (
     <div
       className={`Dropdown ${isOpen ? "Dropdown--open" : ""}`}
-      style={{ maxWidth: `${props.largeur}` }}
+      style={{ width: `${props.largeur}` }}
     >
       <div className="Dropdown__title" onClick={() => setIsOpen(!isOpen)}>
         <p>{props.titreDropdown}</p>

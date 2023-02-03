@@ -6,6 +6,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import "../styles/pages/ficheLogement.scss";
 import Footer from "../components/Footer";
+import Note from "../components/Note";
 
 const FicheLogement = () => {
   const location = useLocation();
@@ -28,40 +29,42 @@ const FicheLogement = () => {
   }
 
   return (
-    <div className="ficheLogement">
-      <Header />
-      <Carrousel images={logement.pictures} />
-      <div className="infoGenerale">
-        <div className="infoGenerale__infos1">
-          <h3>{logement.title}</h3>
-          <h5>{logement.location}</h5>
-          <div className="infoGenerale__infos1__lesTags">
-            {logement.tags.map((tag, index) => (
-              <div key={index}>{tag}</div>
-            ))}
+    <div className="containerPage">
+      <div className="ficheLogement">
+        <Header />
+        <Carrousel images={logement.pictures} />
+        <div className="infoGenerale">
+          <div className="infoGenerale__infos1">
+            <h3>{logement.title}</h3>
+            <h5>{logement.location}</h5>
+            <div className="infoGenerale__infos1__lesTags">
+              {logement.tags.map((tag, index) => (
+                <div key={index}>{tag}</div>
+              ))}
+            </div>
+          </div>
+          <div className="infoGenerale__infos2">
+            <div className="infoGenerale__infos2__proprio">
+              <p>{logement.host.name}</p>
+              <img src={logement.host.picture} alt="Propriétaire" />
+            </div>
+            <div className="infoGenerale__infos2__notesEtoile">
+              <Note numberOfStars={logement.rating} />
+            </div>
           </div>
         </div>
-        <div className="infoGenerale__infos2">
-          <div className="infoGenerale__infos2__proprio">
-            <p>{logement.host.name}</p>
-            <img src={logement.host.picture} alt="Propriétaire" />
-          </div>
-          <div className="infoGenerale__infos2__notesEtoile">
-            <p>ETOILES</p>
-          </div>
+        <div className="infoDropdown">
+          <Dropdown
+            largeur="50%"
+            titreDropdown="Description"
+            contenuDropdown={logement.description}
+          />
+          <Dropdown
+            largeur="50%"
+            titreDropdown="Équipement"
+            contenuDropdown={logement.equipments}
+          />
         </div>
-      </div>
-      <div className="infoDropdown">
-        <Dropdown
-          largeur="100%"
-          titreDropdown="Description"
-          contenuDropdown={logement.description}
-        />
-        <Dropdown
-          largeur="100%"
-          titreDropdown="Équipement"
-          contenuDropdown={logement.equipments}
-        />
       </div>
       <Footer />
     </div>
