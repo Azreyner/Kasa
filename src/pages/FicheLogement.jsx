@@ -55,12 +55,12 @@ const FicheLogement = () => {
         </div>
         <div className="infoDropdown">
           <Dropdown
-            largeur="50%"
+            largeur="ficheLogement"
             titreDropdown="Description"
             contenuDropdown={logement.description}
           />
           <Dropdown
-            largeur="50%"
+            largeur="ficheLogement"
             titreDropdown="Équipement"
             contenuDropdown={logement.equipments}
           />

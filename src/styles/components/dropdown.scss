@@ -68,4 +68,15 @@
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-  }
+}
+
+.Dropdown{
+  width: 50%
+}
+
+@media screen and (max-width: 890px) {
+    .Dropdown{
+      width: 100%;
+    }
+
+}

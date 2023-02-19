@@ -42,7 +42,7 @@
     max-width: 1240px;
     position: relative;
     overflow: hidden;
-    max-height: 415px;
+    height: 415px;
 
     &__image {
         width: 100%;
@@ -81,4 +81,11 @@
         transform: translateX(-50%);
         color: white;
     }
+}
+
+@media screen and (max-width: 890px) {
+    .carrousel {
+        height: 255px;
+    }
+
 }

@@ -2,6 +2,7 @@
 
 .ficheLogement{
   max-width: 1240px;
+  padding: 0 10px;
 }
 
 .infoGenerale{
@@ -130,7 +131,6 @@
 
     .infoDropdown{
         flex-flow: column nowrap;
-        width: 200%;
         .Dropdown:first-child{
             margin-right: 0;
         }
@@ -141,8 +141,9 @@
   @media screen and (max-width: 279px) {
     .infoGenerale{
         &__infos2{
-            justify-content: left;
-
+            flex-flow: column;
+            //justify-content: left;
+            align-items: flex-start;
             &__proprio{
                 flex-flow: row-reverse;
                 padding: 10px 0;
