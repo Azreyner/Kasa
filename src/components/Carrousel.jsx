@@ -19,26 +19,26 @@ const Carrousel = ({ images }) => {
 
   return (
     <div className="carrousel">
-      <img
+      {images.length > 1 &&<img
         className="carrousel__arrow carrousel__arrow--left"
         src={grandeFlecheGauche}
         alt="Flèche vers la gauche"
         onClick={() => handleClickArrow(false)}
-      />
+      />}
       <img
         className="carrousel__image"
         src={images[currentImage]}
         alt="arrousel"
       />
-      <img
+      {images.length > 1 &&<img
         className="carrousel__arrow carrousel__arrow--right"
         src={grandeFlecheDroite}
         alt="Flèche vers la droite"
         onClick={() => handleClickArrow(true)}
-      />
-      <div className="carrousel__indicator">
+      />}
+      {images.length > 1 &&<div className="carrousel__indicator">
         {currentImage + 1}/{images.length}
-      </div>
+      </div>}
     </div>
   );
 };

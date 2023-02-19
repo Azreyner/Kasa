@@ -1,6 +1,6 @@
 .Dropdown {
     margin-bottom: 50px;
-    min-width: 300px;
+    min-width: 200px;
 
     &__title {
       cursor: pointer;
@@ -57,15 +57,15 @@
     }
 
     &__arrow {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
         transition: transform 0.7s ease;
     }
 }
 
 .rotated {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }

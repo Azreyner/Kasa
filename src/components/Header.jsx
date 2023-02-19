@@ -1,21 +1,30 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/img/KasaLogoHeader.png";
 import "../styles/components/header.scss";
 
-function Header() {
+const Header = () => {
+
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
   return (
     <div className="headerKasa">
       <header>
-        <Link to={"/"}>
+        <NavLink to={"/"}>
           <img src={logo} alt="Logo de Kasa" />
-        </Link>
+        </NavLink>
         <nav>
           <ul>
             <li>
-              <Link to={`/`}>Accueil</Link>
+              <NavLink to={`/`} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>Accueil</NavLink>
             </li>
             <li>
-              <Link to={`/apropos`}>A propos</Link>
+              <NavLink to={`/apropos`} style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>A propos</NavLink>
             </li>
           </ul>
         </nav>

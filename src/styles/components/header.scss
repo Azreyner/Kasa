@@ -24,13 +24,14 @@
         padding: 0;
     li a{
         color: $rose;
+        text-decoration: none;
     }
     }
 }
 
 @media (max-width: 500px) { 
     .headerKasa header img{
-        width: 145px;
+        width: 100px;
     }
 
     .headerKasa nav{

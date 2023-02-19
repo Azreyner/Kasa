@@ -1,9 +1,15 @@
+
+.Apropos{
+  max-width: 1240px;
+  padding: 0 10px;
+}
+
 .Apropos .lesDropDown {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 0 70px;
-  max-width: 900px;
+  margin-top: 70px;
 }
 
 .decoration {
@@ -33,5 +39,11 @@
 @media screen and (max-width: 890px) {
   .Apropos .lesDropDown {
     padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Apropos .lesDropDown {
+    padding: 0;
   }
 }

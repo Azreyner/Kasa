@@ -110,6 +110,7 @@
             flex-flow: row-reverse wrap;
             justify-content: space-between;
             align-items: center;
+            margin-top: 10px;
     
             &__proprio{
                 display: flex;
@@ -132,6 +133,23 @@
         width: 200%;
         .Dropdown:first-child{
             margin-right: 0;
+        }
+    }
+  }
+
+
+  @media screen and (max-width: 279px) {
+    .infoGenerale{
+        &__infos2{
+            justify-content: left;
+
+            &__proprio{
+                flex-flow: row-reverse;
+                padding: 10px 0;
+                & p{
+                    margin-left: 5px;
+                }
+            }
         }
     }
   }
